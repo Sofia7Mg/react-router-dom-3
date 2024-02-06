@@ -24,9 +24,9 @@ function App() {
                     <Route path="/" element={<Home />} />
 
                     {/* Parent dans lequel on mettra la balise Outlet */}
-                    <Route path="/list" element={<List />} />
-                    {/* Enfant de List (donc affichage de l'Outlet) */}
-                    <Route path="/list/:id" element={<ListItem />} />
+                    <Route path="/list" element={<List />} >
+                        <Route path="/list/:id" element={<ListItem />} />
+                    </Route>
                 </Route>
             ]
         )
